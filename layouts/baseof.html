@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
+
     <link rel="stylesheet" href="css/global.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+
+    <script src="/js/animation.js" defer></script>
 
     {{ block "head" . }}{{ end }}
 </head>
@@ -32,6 +36,15 @@
                 <a href="">Podporte nás</a>
             </nav>
         </header>
+    </div>
+
+    <div class="parallax">
+        {{ block "hero" . }}{{ end }}
+        
+        <img src="svg/mnt1-fill-s.svg" alt="" class="layer back mnt" data-speed="-0.4">
+        <img src="svg/mnt2-fill-s-f.svg" alt="" class="layer front mnt" data-speed="-0.2">
+        <div class="layer back mnt-bottom-fill" data-speed="0.4" style="background-color: #CFCFCF;"></div>
+        <div class="layer front mnt-bottom-fill" data-speed="0.2" style="background-color: white;"></div>
     </div>
 
     {{ block "main" . }}{{ end }}
