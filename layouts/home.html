@@ -1,0 +1,49 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/homepage.css">
+{{ end }}
+
+{{ define "main" }}
+<div class="parallax">
+    <video src="media/bg.webm" class="bg" autoplay muted loop></video>
+
+    <div class="hero-content">
+        <h1>Traily na skok.</h1>
+        <div class="hero-buttons">
+            <button class="btn btn-primary">Mapa trailov</button>
+            <button class="btn">Adresa</button>
+        </div>
+    </div>
+    
+    <img src="svg/mnt1-fill-s.svg" alt="" class="layer back mnt" data-speed="-0.4">
+    <img src="svg/mnt2-fill-s-f.svg" alt="" class="layer front mnt" data-speed="-0.2">
+    <div class="layer back mnt-bottom-fill" data-speed="0.4" style="background-color: #CFCFCF;"></div>
+    <div class="layer front mnt-bottom-fill" data-speed="0.2" style="background-color: white;"></div>
+</div>
+
+<div class="content-wrapper">
+    <section class="sponsor">
+        <h1>Ďakujeme sponzorom</h1>
+        <div class="sponsor-logos">
+            <img src="sponsor1.png" alt="Sponsor 1">
+            <img src="sponsor2.png" alt="Sponsor 2">
+            <img src="sponsor3.png" alt="Sponsor 3">
+            <img src="sponsor4.png" alt="Sponsor 4">
+            <button class="btn btn-primary">Test</button>
+            <button class="btn">Test</button>
+        </div>
+    </section>
+
+    <section>
+        <h1>Naše traily</h1>
+        <p>Objavte širokú škálu trailov vhodných pre všetky úrovne zdatnosti. Či už ste začiatočník alebo skúsený jazdec, naše traily ponúkajú niečo pre každého. Prejdite sa malebnými lesmi, vychutnajte si výhľady na okolitú prírodu a zažite dobrodružstvo na dvoch kolesách.</p>
+    </section>
+
+    <section class="donate">
+        <div class="donate-content">
+            <h1>Podporte nás</h1>
+            <p>Vaša podpora nám pomáha udržiavať a rozvíjať naše traily pre komunitu. Každý príspevok, veľký či malý, nám umožňuje zlepšovať infraštruktúru, organizovať podujatia a zabezpečiť bezpečnosť všetkých návštevníkov. Spoločne môžeme vytvoriť lepšie miesto pre všetkých milovníkov prírody a cyklistiky.</p>
+            <button class="btn btn-primary">Podporte nás</button>
+        </div>
+    </section>
+</div>
+{{ end }}
