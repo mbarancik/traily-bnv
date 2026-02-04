@@ -3,15 +3,16 @@
 {{ end }}
 
 
-{{ define "hero" }}
-<video src="media/bg.webm" class="bg" autoplay muted loop></video>
+{{ define "hero-bg" }}
+<video src="/media/bg.webm" class="bg" autoplay muted loop></video>
+{{ end }}
 
-<div class="hero-content">
-    <h1>Traily na skok.</h1>
-    <div class="hero-buttons">
-        <button class="btn btn-primary">Mapa trailov</button>
-        <button class="btn">Adresa</button>
-    </div>
+
+{{ define "hero" }}
+<h1>Traily na skok.</h1>
+<div class="hero-buttons">
+    <button class="btn btn-primary">Mapa trailov</button>
+    <button class="btn">Adresa</button>
 </div>
 {{ end }}
 
@@ -21,10 +22,10 @@
     <section class="sponsor">
         <h1>Ďakujeme sponzorom</h1>
         <div class="sponsor-logos">
-            <img src="sponsor1.png" alt="Sponsor 1">
-            <img src="sponsor2.png" alt="Sponsor 2">
-            <img src="sponsor3.png" alt="Sponsor 3">
-            <img src="sponsor4.png" alt="Sponsor 4">
+            <img src="/sponsor1.png" alt="Sponsor 1">
+            <img src="/sponsor2.png" alt="Sponsor 2">
+            <img src="/sponsor3.png" alt="Sponsor 3">
+            <img src="/sponsor4.png" alt="Sponsor 4">
             <button class="btn btn-primary">Test</button>
             <button class="btn">Test</button>
         </div>

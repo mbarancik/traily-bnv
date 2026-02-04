@@ -1,3 +1,13 @@
+:root {
+  --glass-bg: linear-gradient(0deg, #bcbcbca0, #fefefe40);
+  --glass-bg-opaque: linear-gradient(0deg, #838587, #5b5f62);
+  --glass-border: 2px solid #ececec40;
+  --glass-blur: blur(5px) brightness(0.4);
+  --green-gradient: linear-gradient(0deg, #229522b0, #08590883);
+  --green-border: 2px solid #31b53190;
+  --dark-text-shadow: 0 0 5px #202020d0;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -32,22 +42,23 @@ p {
   border-radius: 100px;
   cursor: pointer;
   margin: 0 8px;
-  background: linear-gradient(0deg, #bcbcbca0, #fefefe40);
-  border: 2px solid #ececec40;
-  backdrop-filter: blur(5px) brightness(0.4);
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
   color: white;
   box-shadow: none;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(0deg, #229522b0, #08590883);
-  border: 2px solid #31b53190;
+  background: var(--green-gradient);
+  border: var(--green-border);
   color: #70f970;
 }
 
 .btn:hover {
   box-shadow: 0 0 10px #bcbcbcf0;
+  transform: translateY(-5px);
 }
 
 .btn-primary:hover {
@@ -70,12 +81,12 @@ header {
   width: 80%;
   margin-top: 16px;
   padding: 12px 24px;
-  background: linear-gradient(0deg, #bcbcbca0, #fefefe40);
-  border: 2px solid #ececec40;
-  backdrop-filter: blur(5px) brightness(0.4);
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  backdrop-filter: var(--glass-blur);
   color: white;
   border-radius: 100px;
-  text-shadow: 0 0 5px #202020d0;
+  text-shadow: var(--dark-text-shadow);
 }
 
 header > * {
@@ -104,14 +115,64 @@ header a:hover {
   display: flex;
   align-items: center;
   gap: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.status.closed {
+  color: #f26161;
+  text-shadow: 0 0 5px #950707d7;
+}
+
+.status-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  padding: 16px 20px;
+  width: max-content;
+  max-width: 200px;
+  background: var(--glass-bg-opaque);
+  border: var(--glass-border);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.875rem;
+  text-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.status:hover .status-tooltip {
+  opacity: 1;
 }
 
 /* Hero */
 .parallax {
   position: relative;
-  height: 115vh;
+  height: 80vh;
   overflow: hidden;
   background: linear-gradient(0deg, #122412, #214321);
+}
+
+.hero-content {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  gap: 1rem;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Inter Tight", sans-serif;
+  margin: 0;
+  z-index: 1;
 }
 
 .layer {
