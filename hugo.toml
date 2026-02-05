@@ -1,3 +1,17 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+defaultContentLanguage = 'sk'
 title = 'My New Hugo Site'
+
+[languages]
+  [languages.sk]
+    languageCode = 'sk'
+    languageName = 'Slovenčina'
+    weight = 1
+  [languages.pl]
+    languageCode = 'pl'
+    languageName = 'Polski'
+    weight = 2
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    weight = 3

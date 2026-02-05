@@ -9,10 +9,10 @@
 
 
 {{ define "hero" }}
-<h1>Traily na skok.</h1>
+<h1>{{ .Params.heroTitle }}</h1>
 <div class="hero-buttons">
-    <a href="/mapa-trailov" class="btn btn-primary">Mapa trailov</a>
-    <a href="/adresa" class="btn">Adresa</a>
+    <a href="{{ .Params.heroPrimaryBtnLink }}" class="btn btn-primary">{{ .Params.heroPrimaryBtn }}</a>
+    <a href="{{ .Params.heroSecondaryBtnLink }}" class="btn">{{ .Params.heroSecondaryBtn }}</a>
 </div>
 {{ end }}
 
@@ -20,14 +20,13 @@
 {{ define "main" }}
 <div class="content-wrapper">
     <section class="sponsor">
-        <h1>Ďakujeme sponzorom</h1>
+        <h1>{{ .Params.sponsorsTitle }}</h1>
         <div class="sponsor-logos">
-            <img src="/sponsor1.png" alt="Sponsor 1">
-            <img src="/sponsor2.png" alt="Sponsor 2">
-            <img src="/sponsor3.png" alt="Sponsor 3">
-            <img src="/sponsor4.png" alt="Sponsor 4">
-            <a class="btn btn-primary">Test</a>
-            <a class="btn">Test</a>
+            {{ range .Site.Data.sponsors }}
+                <a href="{{ .url }}" target="_blank">
+                    <img src="{{ .logo }}" alt="{{ .name }} logo">
+                </a>
+            {{ end }}
         </div>
     </section>
 
@@ -38,9 +37,9 @@
 
     <section class="donate">
         <div class="donate-content">
-            <h1>Podporte nás</h1>
-            <p>Vaša podpora nám pomáha udržiavať a rozvíjať naše traily pre komunitu. Každý príspevok, veľký či malý, nám umožňuje zlepšovať infraštruktúru, organizovať podujatia a zabezpečiť bezpečnosť všetkých návštevníkov. Spoločne môžeme vytvoriť lepšie miesto pre všetkých milovníkov prírody a cyklistiky.</p>
-            <button class="btn btn-primary">Podporte nás</button>
+            <h1>{{ .Params.donateTitle }}</h1>
+            <p>{{ .Params.donateText }}</p>
+            <a href="{{ .Params.donateBtnLink }}" class="btn btn-primary">{{ .Params.donateBtn }}</a>
         </div>
     </section>
 </div>

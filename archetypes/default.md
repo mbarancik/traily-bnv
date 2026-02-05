@@ -1,7 +1,6 @@
 +++
-date = '{{ .Date }}'
-draft = true
+slug = '{{ .File.ContentBaseName }}'
+draft = false
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-menu_label = '{{ replace .File.ContentBaseName "-" " " | title }}'
-title_image: ''
+menuLabel = '{{ replace .File.ContentBaseName "-" " " | title }}'
 +++
