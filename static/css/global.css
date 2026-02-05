@@ -37,6 +37,8 @@ p {
 
 /* Buttons */
 .btn {
+  display: inline-block;
+  text-decoration: none;
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 100px;
@@ -92,7 +94,7 @@ header {
 header > * {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 nav {
@@ -109,6 +111,17 @@ header a:hover {
   text-shadow: 0 0 10px #ffffff;
 }
 
+.logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  height: 160%;
+}
+
+.logo {
+  height: 100%;
+}
+
 .status {
   color: #61f261;
   text-shadow: 0 0 5px #079507d7;
@@ -120,8 +133,8 @@ header a:hover {
 }
 
 .status.closed {
-  color: #f26161;
-  text-shadow: 0 0 5px #950707d7;
+  color: #ff4747;
+  text-shadow: 0 0 5px #c31717ed;
 }
 
 .status-tooltip {
@@ -153,7 +166,11 @@ header a:hover {
   position: relative;
   height: 80vh;
   overflow: hidden;
-  background: linear-gradient(0deg, #122412, #214321);
+  background: 
+    linear-gradient(0deg, transparent 29px, #363636 29px),
+    linear-gradient(90deg, transparent 29px, #363636 29px),
+    linear-gradient(0deg, #282828);
+  background-size: 30px 30px;
 }
 
 .hero-content {

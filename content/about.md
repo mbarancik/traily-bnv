@@ -2,6 +2,7 @@
 date = '2026-01-31T23:05:01+01:00'
 draft = false
 title = 'About'
+menu_label = 'About'
 +++
 # About Traily BNV
 Traily BNV is a project dedicated to providing detailed information about hiking trails. Our goal is to help outdoor enthusiasts discover and explore the beautiful landscapes and trails that this area has to offer.
