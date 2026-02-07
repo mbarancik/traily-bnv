@@ -1,9 +1,10 @@
 +++
-heroTitle = ""
+title = "Home"
+heroTitle = "Trails"
 heroPrimaryBtn = ""
 heroPrimaryBtnLink = ""
-heroSecondaryBtn = ""
-heroSecondaryBtnLink = ""
+heroSecondaryBtn = "About"
+heroSecondaryBtnLink = "about"
 sponsorsTitle = ""
 donateTitle = ""
 donateText = ""

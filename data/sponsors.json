@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Angel Wedding",
+        "logo": "/media/sponsors/angel_wedding.png",
+        "url": "https://www.facebook.com/svadobnasalaAngel/"
+    },
+    {
+        "name": "Blue Aqueen",
+        "logo": "/media/sponsors/blue_aqueen.png",
+        "url": "https://www.blueaqueen.sk/"
+    },
+    {
+        "name": "Cafe Racer",
+        "logo": "/media/sponsors/cafe_racer.png",
+        "url": "https://www.caferacer.cafe/"
+    },
+    {
+        "name": "Elektrické Kúrenie",
+        "logo": "/media/sponsors/elektricke_kurenie.png",
+        "url": "https://www.elektricke-kurenie.sk/"
+    },
+    {
+        "name": "Ministerstvo cestovného ruchu a športu Slovenskej republiky",
+        "logo": "/media/sponsors/Min-CestovnehoRuchu-a-Sportu_V2.png",
+        "url": "https://www.mincrs.sk/"
+    },
+    {
+        "name": "NKK BAU",
+        "logo": "/media/sponsors/nkk_bau.png",
+        "url": "https://nkk-bau.com/"
+    },
+    {
+        "name": "PC Špital",
+        "logo": "/media/sponsors/pc_spital.png",
+        "url": "https://www.pcspital.sk/"
+    },
+    {
+        "name": "Penzión Adrian",
+        "logo": "/media/sponsors/penzion_adrian.png",
+        "url": "https://www.penzionadrian.sk/"
+    },
+    {
+        "name": "Severovýchod Slovenska | Kraj unikátov",
+        "logo": "/media/sponsors/severovychod_slovenska_kraj_unikatov.png",
+        "url": "https://www.severovychod.sk/"
+    },
+    {
+        "name": "JnJ Štrk Piesok Kamenivo",
+        "logo": "/media/sponsors/strk_JNJ.png",
+        "url": "https://www.facebook.com/p/%C5%A0trkPiesokKamenivo-100057586923794/"
+    },
+    {
+        "name": "Unizdrav",
+        "logo": "/media/sponsors/unizdrav.svg",
+        "url": "https://www.unizdrav.sk/"
+    }
+]

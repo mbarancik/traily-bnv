@@ -11,36 +11,43 @@
 {{ define "hero" }}
 <h1>{{ .Params.heroTitle }}</h1>
 <div class="hero-buttons">
-    <a href="{{ .Params.heroPrimaryBtnLink }}" class="btn btn-primary">{{ .Params.heroPrimaryBtn }}</a>
-    <a href="{{ .Params.heroSecondaryBtnLink }}" class="btn">{{ .Params.heroSecondaryBtn }}</a>
+    {{ if .Params.heroPrimaryBtnLink }}
+        <a href="{{ .Params.heroPrimaryBtnLink }}" class="btn btn-primary">{{ .Params.heroPrimaryBtn }}</a>
+    {{ end }}
+    {{ if .Params.heroSecondaryBtnLink }}
+        <a href="{{ .Params.heroSecondaryBtnLink }}" class="btn">{{ .Params.heroSecondaryBtn }}</a>
+    {{ end }}
 </div>
 {{ end }}
 
 
 {{ define "main" }}
 <div class="content-wrapper">
-    <section class="sponsor">
-        <h1>{{ .Params.sponsorsTitle }}</h1>
-        <div class="sponsor-logos">
-            {{ range .Site.Data.sponsors }}
-                <a href="{{ .url }}" target="_blank">
-                    <img src="{{ .logo }}" alt="{{ .name }} logo">
-                </a>
-            {{ end }}
-        </div>
-    </section>
+    {{ if .Params.sponsorsTitle }}
+        <section class="sponsor">
+            <h1>{{ .Params.sponsorsTitle }}</h1>
+            <div class="sponsor-logos">
+                {{ range .Site.Data.sponsors }}
+                    <a href="{{ .url }}" target="_blank">
+                        <img src="{{ .logo }}" alt="{{ .name }} logo">
+                    </a>
+                {{ end }}
+            </div>
+        </section>
+    {{ end }}
 
     <section>
-        <h1>Naše traily</h1>
-        <p>Objavte širokú škálu trailov vhodných pre všetky úrovne zdatnosti. Či už ste začiatočník alebo skúsený jazdec, naše traily ponúkajú niečo pre každého. Prejdite sa malebnými lesmi, vychutnajte si výhľady na okolitú prírodu a zažite dobrodružstvo na dvoch kolesách.</p>
+        {{ .Content }}
     </section>
 
-    <section class="donate">
-        <div class="donate-content">
-            <h1>{{ .Params.donateTitle }}</h1>
-            <p>{{ .Params.donateText }}</p>
-            <a href="{{ .Params.donateBtnLink }}" class="btn btn-primary">{{ .Params.donateBtn }}</a>
-        </div>
-    </section>
+    {{ if .Params.donateTitle }}
+        <section class="donate">
+            <div class="donate-content">
+                <h1>{{ .Params.donateTitle }}</h1>
+                <p>{{ .Params.donateText }}</p>
+                <a href="{{ .Params.donateBtnLink }}" class="btn btn-primary">{{ .Params.donateBtn }}</a>
+            </div>
+        </section>
+    {{ end }}
 </div>
 {{ end }}
