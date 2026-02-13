@@ -71,12 +71,39 @@
     </div>
 
     {{ block "main" . }}{{ end }}
-    
-    <footer>
-        <h1 class="footer-bg">TrailyBNV</h1>
 
-        <div class="footer-wrapper">
-            
+    <footer>
+        <img src="/svg/mnt3-footer.svg" alt="" class="footer-mnt" data-speed="0.2">
+        <!-- <h1 class="footer-bg">Traily BNV</h1> -->
+        <img src="/svg/footer-title.svg" alt="" class="footer-bg">
+
+        <div class="footer-content">
+            <div>
+                <h1>Traily BNV</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque et laboriosam commodi assumenda id, veritatis, sequi aliquid iste placeat esse at tempora! Quae a maiores deleniti adipisci, eum itaque laudantium?</p>
+            </div>
+
+            <div>
+                <div class="footer-status">
+                    <h1>Stav:</h1>
+                    <span class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}">
+                        <span class="material-symbols-outlined">
+                            {{ if .Site.Data.status.isOpen }}check_circle{{ else }}do_not_disturb_on{{ end }}
+                        </span>
+                        {{ if .Site.Data.status.isOpen }}{{ T "statusOpen" }}{{ else }}{{ T "statusClosed" }}{{ end }}
+                    </span>
+                </div>
+                <p>
+                    {{ if .Site.Data.status.isOpen }}{{ .Site.Data.status.openMsg }}{{ else }}{{ .Site.Data.status.closedMsg }}{{ end }}
+                </p>
+            </div>
+
+            <div>
+                <h1>Nájdete nás:</h1>
+                {{ range .Site.Data.social }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+                {{ end }}
+            </div>
         </div>
     </footer>
 </body>

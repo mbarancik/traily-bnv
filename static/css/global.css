@@ -19,7 +19,7 @@ body {
 
 h1 {
   font-family: "Inter Tight", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 p {
@@ -88,6 +88,7 @@ header {
   color: white;
   border-radius: 100px;
   text-shadow: var(--dark-text-shadow);
+  box-shadow: 0 2px 10px #20202060;
 }
 
 header > * {
@@ -254,11 +255,9 @@ header:hover .language-tooltip {
   position: relative;
   height: 80vh;
   overflow: hidden;
-  background: 
-    linear-gradient(0deg, transparent 29px, #363636 29px),
-    linear-gradient(90deg, transparent 29px, #363636 29px),
-    linear-gradient(0deg, #282828);
-  background-size: 30px 30px;
+  background: url(/svg/topo-black-bg.svg);
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
@@ -304,38 +303,81 @@ header:hover .language-tooltip {
 
 /* Footer */
 footer {
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-mnt {
   width: 100%;
-  background: #202020;
-  color: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  overflow-y: hidden;
+  display: block;
 }
 
 .footer-bg {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  font-size: 16rem;
-  font-weight: bold;
-  background: linear-gradient(0deg, #ffffff, #ffffff00 80%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(20%);
+  z-index: 0;
+  opacity: 0.06;
+}
+
+.footer-content {
+  background-color: #282828;
+  color: white;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.footer-content * {
+  z-index: 10;
+  position: relative;
+}
+
+.footer-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-content a {
+  display: block;
+  color: #bcbcbc;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-content a:hover {
+  color: white;
+}
+
+.footer-status {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-status ~ p {
+  margin-top: 0;
+}
+
+.footer-content .status {
+  cursor: inherit;
+  width: fit-content;
+}
+
+/* .footer-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(20%);
+  font-size: 20rem;
+  font-family: "Inter Tight", sans-serif;
+  margin: 0;
+  background: linear-gradient(0deg, #80808040, transparent 90%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.3;
-  text-align: center;
-  user-select: none;
-  transform: translateY(20%);
-}
-
-.footer-wrapper {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  align-self: center;
-  justify-self: center;
-  width: min(1200px, 95vw);
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
+} */
