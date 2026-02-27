@@ -1,5 +1,5 @@
 {{ define "head" }}
-
+<link rel="stylesheet" href="/css/page.css">
 {{ end }}
 
 {{ define "hero" }}
@@ -10,6 +10,8 @@
 
 {{ define "main" }}
 <div class="content-wrapper">
-    {{ .Content }}
+    <div class="markdown-content">
+        {{ .Content }}
+    </div>
 </div>
 {{ end }}

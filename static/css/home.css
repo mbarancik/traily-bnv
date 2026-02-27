@@ -27,7 +27,7 @@
   padding-bottom: 4rem;
 }
 
-section {
+.content-wrapper section {
   width: min(1200px, 90vw);
 }
 
@@ -54,7 +54,7 @@ section {
   box-sizing: border-box;
   border-radius: 1.5rem;
   text-align: center;
-  background: url(/svg/topo-black-bg.svg) no-repeat center center;
+  background: url(/svg/topo-green-bg.svg) no-repeat center center;
   background-size: cover;
   display: flex;
   justify-content: center;

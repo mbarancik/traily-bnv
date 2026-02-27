@@ -1,0 +1,23 @@
+/* Content */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.markdown-content {
+  width: min(1200px, 90vw);
+}
+
+.markdown-content img {
+  float: inline-end;
+  max-height: 60vh;
+  margin: 1rem;
+  border-radius: 1.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 2rem;
+}
