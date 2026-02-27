@@ -1,14 +1,12 @@
 [
   {
     "name": "Facebook",
-    "url": "https://www.facebook.com/trailybnv"
+    "url": "https://www.facebook.com/p/Traily-Bardejovsk%C3%A1-Nov%C3%A1-Ves-TBNV-61576126439455/",
+    "icon": "/media/Facebook.webp"
   },
   {
     "name": "Instagram",
-    "url": "https://www.instagram.com/traily.bnv/"
-  },
-  {
-    "name": "Strava",
-    "url": "https://www.strava.com/clubs/traily-bnv"
+    "url": "https://www.instagram.com/traily.bnv/",
+    "icon": "/media/Instagram.webp"
   }
 ]

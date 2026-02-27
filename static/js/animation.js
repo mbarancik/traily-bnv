@@ -18,6 +18,7 @@ window.addEventListener("scroll", () => {
 
   if (mntFooter) {
     const speed = mntFooter.dataset.speed || 0;
-    mntFooter.style.transform = `translateY(${scrollYBottom * speed + 1}px)`;
+    const translateScroll = Math.max(0, scrollYBottom - 50)
+    mntFooter.style.transform = `translateY(${translateScroll * speed + 1}px)`;
   }
 });

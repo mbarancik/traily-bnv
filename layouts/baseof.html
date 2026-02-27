@@ -73,7 +73,7 @@
     {{ block "main" . }}{{ end }}
 
     <footer>
-        <img src="/svg/mnt3-footer.svg" alt="" class="footer-mnt" data-speed="0.2">
+        <img src="/svg/mnt3-footer.svg" alt="" class="footer-mnt" data-speed="0.3">
         <!-- <h1 class="footer-bg">Traily BNV</h1> -->
         <img src="/svg/footer-title.svg" alt="" class="footer-bg">
 
@@ -101,8 +101,17 @@
             <div>
                 <h1>Nájdete nás:</h1>
                 {{ range .Site.Data.social }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+                    <div class="social-link">
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ .icon }}" alt="{{ .name }}">
+                        </a>
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+                    </div>
                 {{ end }}
+            </div>
+
+            <div class="footer-bottom">
+                <a href="https://www.freepik.com/free-vector/flat-design-mountain-range-silhouette_42621698.htm#fromView=keyword&page=2&position=20&uuid=8d6ea20f-54f6-461e-afe5-926e7d5fec45&query=Mountain+svg">Image by freepik</a>
             </div>
         </div>
     </footer>
