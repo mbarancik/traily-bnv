@@ -1,0 +1,24 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/trails.css">
+{{ end }}
+
+{{ define "hero" }}
+<h1>{{ .Params.heroTitle | default .Title }}</h1>
+{{ end }}
+
+{{ define "main" }}
+<!-- <div class="content-wrapper">
+    <section class="trails-list">
+        {{ range .Pages }}
+            <article class="trail-card">
+                <h2>{{ .Title }}</h2>
+                {{ with .Params.difficulty }}<p><strong>{{ T "difficulty" }}</strong> {{ . }}</p>{{ end }}
+                {{ with .Params.distance }}<p><strong>{{ T "distance" }}</strong> {{ . }}</p>{{ end }}
+                {{ with .Params.color }}<span class="trail-color" style="background: {{ . }};"></span>{{ end }}
+                <div class="trail-content">{{ .Content }}</div>
+                {{ with .Params.link }}<a href="{{ . }}" target="_blank" class="btn">{{ T "moreInfo" }}</a>{{ end }}
+            </article>
+        {{ end }}
+    </section>
+</div> -->
+{{ end }}

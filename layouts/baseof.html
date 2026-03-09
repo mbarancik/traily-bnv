@@ -37,10 +37,8 @@
             </div>
             <div>
                 <nav>
-                    {{ range where .Site.RegularPages "Section" "" }}
-                        {{ if and .Params.menuLabel (eq .Lang $.Site.Language.Lang) }}
-                            <a href="{{ .Permalink }}">{{ .Params.menuLabel }}</a>
-                        {{ end }}
+                    {{ range .Site.Menus.main }}
+                        <a href="{{ .URL }}">{{ .Name }}</a>
                     {{ end }}
                 </nav>
                 {{ if ne (len .Translations) 0 }}
@@ -85,7 +83,7 @@
 
             <div>
                 <div class="footer-status">
-                    <h1>Stav:</h1>
+                    <h1>Aktuálny stav</h1>
                     <span class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}">
                         <span class="material-symbols-outlined">
                             {{ if .Site.Data.status.isOpen }}check_circle{{ else }}do_not_disturb_on{{ end }}
@@ -99,7 +97,7 @@
             </div>
 
             <div>
-                <h1>Nájdete nás:</h1>
+                <h1>Sociálne siete</h1>
                 {{ range .Site.Data.social }}
                     <div class="social-link">
                         <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">

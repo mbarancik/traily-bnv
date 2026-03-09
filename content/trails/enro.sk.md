@@ -1,0 +1,19 @@
++++
+title = 'Enro'
+
+difficulty = "Veľmi vysoká"
+distance = "614 m"
+color = "#000000"
+photo = ""
+video = ""
+link = ""
+
+[_build]
+  render = "never"
+  list = "local"
++++
+Enro je príroedný enduro trail vedený v technickom lesnom teréne. Trasa je charakteristická množstvom koreňov, odklonených úsekov, neprehľadných zákrut a úzkych prejazdov medzi stromami. Na trati sa nachádza aj niekoľko dropov a úzkych prejazdov pomedzi stromy, ktoré vyžadujú dobrú techniku jazdy.
+
+Vzhľadom na svoj charakter je trail určený pokročilým jazdcom, najmä za mokra alebo po daždi.
+
+V závere trailu nasleduje sekcia Pinball – prejazd medzi stromami cez prírodné vlny. Za ňou si jazdec môže vybrať z dvoch smerov - vľavo séria štyroch prepadov, tzv. Kaskády, vpravo dva prudké zrázy vedúce priamo na lesnú zvážnicu.

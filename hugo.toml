@@ -15,3 +15,35 @@ title = 'My New Hugo Site'
     languageCode = 'en'
     languageName = 'English'
     weight = 3
+
+# --- Menus ---
+# Edit name/weight here to rename or reorder links.
+# Add a new [[languages.xx.menus.main]] block to add a link.
+# Remove a block to remove a link.
+
+[[languages.sk.menus.main]]
+  name = "Trails"
+  pageRef = "/trails"
+  weight = 10
+[[languages.sk.menus.main]]
+  name = "O nás"
+  pageRef = "/about"
+  weight = 20
+
+[[languages.pl.menus.main]]
+  name = "Trasy"
+  pageRef = "/trails"
+  weight = 10
+[[languages.pl.menus.main]]
+  name = "Info"
+  pageRef = "/info"
+  weight = 20
+
+[[languages.en.menus.main]]
+  name = "Trails"
+  pageRef = "/trails"
+  weight = 10
+[[languages.en.menus.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 20

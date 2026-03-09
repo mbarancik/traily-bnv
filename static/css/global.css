@@ -98,7 +98,8 @@ header > * {
 }
 
 nav {
-  gap: 2rem;
+  display: flex;
+  gap: 1rem;
 }
 
 header a {
@@ -326,7 +327,7 @@ footer {
   color: white;
   padding: 4rem 4rem 1.5rem 4rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.7fr;
   grid-template-rows: auto auto;
   column-gap: 4rem;
   row-gap: 2rem;

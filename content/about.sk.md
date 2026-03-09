@@ -1,7 +1,6 @@
 +++
 draft = false
 title = 'About'
-menuLabel = 'About'
 +++
 # Lorem ipsum
 Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem 
