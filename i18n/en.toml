@@ -4,3 +4,6 @@ statusClosed = "Closed"
 
 distance = "Distance"
 elevation = "Elevation"
+trailVideo = "Video"
+gallery = "Gallery"
+trailExternalLink = "Open trail link"
