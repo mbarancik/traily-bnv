@@ -3,7 +3,8 @@ title = 'Enro'
 
 difficulty = "Veľmi vysoká"
 distance = "614 m"
-color = "#000000"
+elevation = "20 m"
+color = "#121212"
 photo = ""
 video = ""
 link = ""

@@ -7,18 +7,40 @@
 {{ end }}
 
 {{ define "main" }}
-<!-- <div class="content-wrapper">
-    <section class="trails-list">
-        {{ range .Pages }}
-            <article class="trail-card">
-                <h2>{{ .Title }}</h2>
-                {{ with .Params.difficulty }}<p><strong>{{ T "difficulty" }}</strong> {{ . }}</p>{{ end }}
-                {{ with .Params.distance }}<p><strong>{{ T "distance" }}</strong> {{ . }}</p>{{ end }}
-                {{ with .Params.color }}<span class="trail-color" style="background: {{ . }};"></span>{{ end }}
-                <div class="trail-content">{{ .Content }}</div>
-                {{ with .Params.link }}<a href="{{ . }}" target="_blank" class="btn">{{ T "moreInfo" }}</a>{{ end }}
-            </article>
-        {{ end }}
-    </section>
-</div> -->
+<div class="card-grid">
+    {{ range .Pages }}
+        <div class="card" style='--card-color: {{ .Params.Color | default "#aaaaaa" }};'>
+            <div class="info">
+                <h1>{{ .Title }}</h1>
+                {{ if .Params.Difficulty }}
+                    <p class="difficulty">{{ .Params.Difficulty }}</p>
+                {{ end }}
+            </div>
+            {{ if or .Params.Distance .Params.Elevation }}
+                <div class="stats">
+                    {{ if .Params.Distance }}
+                        <div>
+                            <h2>{{ .Params.Distance }}</h2>
+                            <p>{{ T "distance" }}</p>
+                        </div>
+                    {{ end }}
+                    {{ if and .Params.Elevation .Params.Distance }}
+                        <div class="divider"></div>
+                    {{ end }}
+                    {{ if .Params.Elevation }}
+                        <div>
+                            <h2>{{ .Params.Elevation }}</h2>
+                            <p>{{ T "elevation" }}</p>
+                        </div>
+                    {{ end }}
+                </div>
+            {{ end }}
+            {{ if .Params.Image }}
+                <img src="{{ .Params.Image }}" alt="{{ .Title }} image">
+            {{ else }}
+                <p>{{ .Content | truncate 200 "..." }}</p>
+            {{ end }}
+        </div>
+    {{ end }}
+</div>
 {{ end }}

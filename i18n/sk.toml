@@ -1,3 +1,6 @@
 headerTitle = "Traily BNV"
 statusOpen = "Otvorené"
 statusClosed = "Zatvorené"
+
+distance = "Vzdialenosť"
+elevation = "Prevýšenie"

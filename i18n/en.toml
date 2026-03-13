@@ -1,3 +1,6 @@
 headerTitle = "BNV Trails"
 statusOpen = "Open"
 statusClosed = "Closed"
+
+distance = "Distance"
+elevation = "Elevation"

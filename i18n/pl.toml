@@ -1,3 +1,6 @@
 headerTitle = "Traily BNV"
 statusOpen = "Open"
 statusClosed = "Closed"
+
+distance = "Vzd"
+elevation = "Elev"

@@ -1,0 +1,102 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 0 3.5rem;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    background-color: #ececec;
+}
+
+.card {
+    background: var(--card-color);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 0 5px #0f0f0f5f;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 10px #0f0f0f5f;
+    cursor: pointer;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    background: linear-gradient(0deg, #9999991e, #1e1e1e4b);
+    border: 2px solid #ececec84;
+    z-index: -1;
+}
+
+.card * {
+    color: #ffffffee;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.info .difficulty {
+    font-size: 1rem;
+    color: #ffffffaa;
+}
+
+.stats {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.stats .divider {
+    width: 1px;
+    background: #ffffff44;
+}
+
+.stats > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats > div > h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.stats > div > p {
+    font-size: 0.875rem;
+    color: #ffffffaa;
+}
+
+.card > img {
+    width: 100%;
+    border-radius: 0.5rem;
+    height: auto;
+    max-height: 300px; /* Adjust as needed */
+    object-fit: cover;
+    object-position: center;
+}
+
+.card > p {
+    font-size: 1rem;
+    color: #ffffffcc;
+}
+
+/* On click */
