@@ -68,12 +68,12 @@
                         language
                     </span>
                     <div class="divider"></div>
-                    <span class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}">
+                    <a class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}" href="#status">
                         <span class="material-symbols-rounded">
                             {{ if .Site.Data.status.isOpen }}check_circle{{ else }}do_not_disturb_on{{ end }}
                         </span>
                         {{ if .Site.Data.status.isOpen }}{{ T "statusOpen" }}{{ else }}{{ T "statusClosed" }}{{ end }}
-                    </span>
+                    </a>
                 </div>
                 <div class="mobile-lang">
                     {{ if ne (len .Translations) 0 }}
@@ -112,7 +112,7 @@
             </div>
 
             <div>
-                <div class="footer-status">
+                <div id="status" class="footer-status">
                     <h1>Aktuálny stav</h1>
                     <span class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}">
                         <span class="material-symbols-rounded">

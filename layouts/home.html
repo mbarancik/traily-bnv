@@ -26,12 +26,50 @@
     {{ if .Params.sponsorsTitle }}
         <section class="sponsor">
             <h1>{{ .Params.sponsorsTitle }}</h1>
-            <div class="sponsor-logos">
-                {{ range .Site.Data.sponsors }}
-                    <a href="{{ .url }}" target="_blank">
-                        <img src="{{ .logo }}" alt="{{ .name }} logo">
-                    </a>
-                {{ end }}
+            {{ $all := .Site.Data.sponsors }}
+            {{ $mid := div (add (len $all) 1) 2 }}
+            {{ $top := first $mid $all }}
+            {{ $bottom := after $mid $all }}
+            <div class="carousel-group">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        {{ range $top }}
+                            <a href="{{ .url }}" target="_blank">
+                                <img src="{{ .logo }}" alt="{{ .name }} logo">
+                            </a>
+                        {{ end }}
+                        {{ range $top }}
+                            <a href="{{ .url }}" target="_blank" tabindex="-1" aria-hidden="true">
+                                <img src="{{ .logo }}" alt="{{ .name }} logo">
+                            </a>
+                        {{ end }}
+                        {{ range $top }}
+                            <a href="{{ .url }}" target="_blank" tabindex="-1" aria-hidden="true">
+                                <img src="{{ .logo }}" alt="{{ .name }} logo">
+                            </a>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track carousel-track--reverse">
+                        {{ range $bottom }}
+                            <a href="{{ .url }}" target="_blank">
+                                <img src="{{ .logo }}" alt="{{ .name }} logo">
+                            </a>
+                        {{ end }}
+                        {{ range $bottom }}
+                            <a href="{{ .url }}" target="_blank" tabindex="-1" aria-hidden="true">
+                                <img src="{{ .logo }}" alt="{{ .name }} logo">
+                            </a>
+                        {{ end }}
+                        {{ range $bottom }}
+                            <a href="{{ .url }}" target="_blank" tabindex="-1" aria-hidden="true">
+                                <img src="{{ .logo }}" alt="{{ .name }} logo">
+                            </a>
+                        {{ end }}
+                    </div>
+                </div>
             </div>
         </section>
     {{ end }}

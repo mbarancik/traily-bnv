@@ -526,6 +526,10 @@ footer {
     margin: 0 7px 0 5px;
   }
 
+  .mobile-header .status:hover {
+    text-shadow: none;
+  }
+
   .mobile-header .lang-divider {
     display: flex;
     align-items: center;
