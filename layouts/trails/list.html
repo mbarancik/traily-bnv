@@ -10,7 +10,7 @@
 {{ define "main" }}
 <div class="card-grid">
     {{ range .Pages }}
-        {{ $cover := .Params.Image | default .Params.Photo }}
+        {{ $cover := .Resources.Get "trails/kiddo/stolicka2.jpg" }}
         {{ $gallery := .Params.Gallery | default .Params.Images }}
         <article class="card" style='--card-color: {{ .Params.Color | default "#aaaaaa" }};' role="button" tabindex="0" aria-expanded="false">
             <div class="info">
@@ -38,10 +38,12 @@
                     {{ end }}
                 </div>
             {{ end }}
-            {{ if $cover }}
-                <img src="{{ $cover }}" alt="{{ .Title }} image">
-            {{ else }}
-                <p>{{ .Content | truncate 200 "..." }}</p>
+            {{ with .Resources.Get (.Params.Photo) }}
+                {{ if .RelPermalink }}
+                    <img src="{{ .RelPermalink }}" alt="{{ .Title }} image">
+                {{ else }}
+                    <p>{{ .Content | truncate 200 "..." }}</p>
+                {{ end }}
             {{ end }}
 
             <div class="card-details">

@@ -5,7 +5,7 @@ difficulty = "Ľahký"
 distance = "10 km"
 elevation = "200 m"
 color = "#0d6d00"
-image = "/media/stolicka2.jpg"
+photo = "stolicka2.jpg"
 video = ""
 link = ""
 
