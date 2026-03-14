@@ -21,3 +21,17 @@
 .markdown-content h2 {
   font-size: 2rem;
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .markdown-content img {
+    float: none;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .markdown-content h2 {
+    font-size: 1.5rem;
+  }
+}

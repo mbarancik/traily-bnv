@@ -72,3 +72,29 @@
   gap: 1rem;
   width: min(600px, 90vw);
 }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .parallax {
+    height: 80vh;
+  }
+
+  .hero-content {
+    height: 100%;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .sponsor-logos {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .donate-content {
+    gap: 0;
+  }
+}
