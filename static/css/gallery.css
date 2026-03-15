@@ -1,23 +1,35 @@
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: min(1000px, 90vw);
+  margin: 0 auto;
+}
+
+.youtube {
+  width: min(800px, 90vw);
+  aspect-ratio: 16 / 9;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.youtube iframe {
   width: 100%;
-  padding-bottom: 4rem;
+  height: 100%;
+  border: none;
 }
 
 .grid {
     width: min(1200px, 90vw);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 1rem;
     z-index: 10;
+    margin: 2rem auto;
 }
 
 .grid img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 1rem;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -36,11 +48,12 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 100;
     gap: 1rem;
@@ -50,6 +63,7 @@
     display: flex;
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
 }
 
 .lightbox-img {

@@ -21,11 +21,23 @@
 
 {{ define "main" }}
 <div class="content-wrapper">
-    <div class="grid">
-        {{ range .Resources.ByType "image" }}
-            <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
-        {{ end }}
-    </div>
+    {{ .Content }}
+</div>
+
+<div class="grid">
+    {{ range .Resources.ByType "image" }}
+        {{ $thumb := .Resize "720x webp q55" }}
+        {{ $full := .Resize "1800x webp q65" }}
+        <img
+            src="{{ $thumb.RelPermalink }}"
+            data-full="{{ $full.RelPermalink }}"
+            alt="{{ .Title }}"
+            width="{{ $thumb.Width }}"
+            height="{{ $thumb.Height }}"
+            loading="lazy"
+            decoding="async"
+        >
+    {{ end }}
 </div>
 
 <div class="lightbox">
