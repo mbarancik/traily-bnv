@@ -1,0 +1,4 @@
++++
+title = 'Fotogaléria'
+heroTitle = "Fotogaléria"
++++

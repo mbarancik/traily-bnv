@@ -1,10 +1,23 @@
 {{ define "head" }}
 <link rel="stylesheet" href="/css/page.css">
+
+{{ with .Params.heroImage }}
+    <style>
+        .hero {
+            background-image: url('{{ . }}');
+        }
+
+        .hero-content {
+            backdrop-filter: blur(5px);
+        }
+    </style>
+{{ end }}
+
 {{ end }}
 
 {{ define "hero" }}
 <div class="hero-content">
-    <h1>O nás</h1>
+    <h1>{{ .Params.heroTitle }}</h1>
 </div>
 {{ end }}
 

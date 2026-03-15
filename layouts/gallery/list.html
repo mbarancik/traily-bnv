@@ -1,0 +1,43 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/gallery.css">
+<script src="/js/gallery.js" defer></script>
+{{ end }}
+
+{{ define "hero-bg" }}
+    {{ with .Params.heroImage }}
+        <style>
+            .parallax {
+                background-image: url('{{ . }}');
+            }
+        </style>
+    {{ end }}
+{{ end }}
+
+{{ define "hero" }}
+<div class="hero-content">
+    <h1>{{ .Params.heroTitle }}</h1>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<div class="content-wrapper">
+    <div class="grid">
+        {{ range .Resources.ByType "image" }}
+            <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+        {{ end }}
+    </div>
+</div>
+
+<div class="lightbox">
+    <button class="close-btn">
+        <span class="material-symbols-rounded">close</span>
+    </button>
+    <button class="prev-btn">
+        <span class="material-symbols-rounded">chevron_left</span>
+    </button>
+    <img src="" alt="" class="lightbox-img">
+    <button class="next-btn">
+        <span class="material-symbols-rounded">chevron_right</span>
+    </button>
+</div>
+{{ end }}

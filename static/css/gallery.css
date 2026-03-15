@@ -1,0 +1,81 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.grid {
+    width: min(1200px, 90vw);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    z-index: 10;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    gap: 1rem;
+}
+
+.lightbox.open {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img {
+    max-width: 95%;
+    max-height: 95%;;
+}
+
+.lightbox button {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.lightbox button:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.lightbox .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

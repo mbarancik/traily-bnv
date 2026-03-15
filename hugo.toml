@@ -26,6 +26,10 @@ title = 'My New Hugo Site'
   pageRef = "/trails"
   weight = 10
 [[languages.sk.menus.main]]
+  name = "Fotogaléria"
+  pageRef = "/gallery"
+  weight = 19
+[[languages.sk.menus.main]]
   name = "O nás"
   pageRef = "/about"
   weight = 20
@@ -35,6 +39,10 @@ title = 'My New Hugo Site'
   pageRef = "/trails"
   weight = 10
 [[languages.pl.menus.main]]
+  name = "Galeria"
+  pageRef = "/gallery"
+  weight = 19
+[[languages.pl.menus.main]]
   name = "Info"
   pageRef = "/info"
   weight = 20
@@ -43,6 +51,10 @@ title = 'My New Hugo Site'
   name = "Trails"
   pageRef = "/trails"
   weight = 10
+[[languages.en.menus.main]]
+  name = "Gallery"
+  pageRef = "/gallery"
+  weight = 19
 [[languages.en.menus.main]]
   name = "About"
   pageRef = "/about"
