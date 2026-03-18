@@ -33,7 +33,7 @@
                         </span>
                         {{ if .Site.Data.status.isOpen }}{{ T "statusOpen" }}{{ else }}{{ T "statusClosed" }}{{ end }}
                         <div class="status-tooltip">
-                            {{ if .Site.Data.status.isOpen }}{{ .Site.Data.status.openMsg }}{{ else }}{{ .Site.Data.status.closedMsg }}{{ end }}
+                            {{ if .Site.Data.status.isOpen }}{{ index .Site.Data.status.openMsg .Lang }}{{ else }}{{ index .Site.Data.status.closedMsg .Lang }}{{ end }}
                         </div>
                     </span>
                 </div>
@@ -119,7 +119,7 @@
                     </span>
                 </div>
                 <p>
-                    {{ if .Site.Data.status.isOpen }}{{ .Site.Data.status.openMsg }}{{ else }}{{ .Site.Data.status.closedMsg }}{{ end }}
+                    {{ if .Site.Data.status.isOpen }}{{ index .Site.Data.status.openMsg .Lang }}{{ else }}{{ index .Site.Data.status.closedMsg .Lang }}{{ end }}
                 </p>
             </div>
 

@@ -17,6 +17,21 @@
   height: 80%;
 }
 
+.hero-buttons a {
+  animation: come-in 0.7s ease-out;
+}
+
+@keyframes come-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Content */
 .content-wrapper {
   display: flex;

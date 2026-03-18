@@ -1,5 +1,6 @@
 {{ define "head" }}
 <link rel="stylesheet" href="/css/home.css">
+<script src="/js/home.js" defer></script>
 {{ end }}
 
 
@@ -9,7 +10,7 @@
 
 
 {{ define "hero" }}
-<h1>{{ .Params.heroTitle }}</h1>
+<h1 class="hero-title">{{ .Params.heroTitle }}</h1>
 <div class="hero-buttons">
     {{ if .Params.heroPrimaryBtnLink }}
         <a href="{{ .Params.heroPrimaryBtnLink }}" class="btn btn-primary">{{ .Params.heroPrimaryBtn }}</a>

@@ -1,6 +1,8 @@
 :root {
   --bg-color: #eeede4;
   --text-color: #2d2d2d;
+  --grid-minor-color: #2d2d2d0b;
+  --grid-minor-size: 20px;
 
   --glass-bg: linear-gradient(0deg, #b3b3b364, #dedede13);
   --glass-bg-opaque: linear-gradient(0deg, #3e3e3e, #474747);
@@ -21,6 +23,13 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: var(--bg-color);
+  background-image:
+    linear-gradient(to right, var(--grid-minor-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-minor-color) 1px, transparent 1px);
+  background-size:
+    var(--grid-minor-size) var(--grid-minor-size),
+    var(--grid-minor-size) var(--grid-minor-size);
+  background-repeat: repeat;
   color: var(--text-color);
 }
 
@@ -373,7 +382,7 @@ footer {
   width: 100%;
   transform: translateY(20%);
   z-index: 0;
-  opacity: 0.1;
+  opacity: 0.06;
 }
 
 .footer-content {
