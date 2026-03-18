@@ -10,15 +10,14 @@
 {{ define "main" }}
 <div class="card-grid">
     {{ range .Pages }}
-        {{ $cover := .Resources.Get "trails/kiddo/stolicka2.jpg" }}
-        {{ $gallery := .Params.Gallery | default .Params.Images }}
-        <article class="card" style='--card-color: {{ .Params.Color | default "#aaaaaa" }};' role="button" tabindex="0" aria-expanded="false">
+        <div class="card" style='--card-color: {{ .Params.Color | default "#909090" }};' role="button" tabindex="0" aria-expanded="false">
             <div class="info">
                 <h1>{{ .Title }}</h1>
                 {{ if .Params.Difficulty }}
                     <p class="difficulty">{{ .Params.Difficulty }}</p>
                 {{ end }}
             </div>
+
             {{ if or .Params.Distance .Params.Elevation }}
                 <div class="stats">
                     {{ if .Params.Distance }}
@@ -38,6 +37,7 @@
                     {{ end }}
                 </div>
             {{ end }}
+
             {{ with .Resources.Get (.Params.Photo) }}
                 {{ if .RelPermalink }}
                     <img src="{{ .RelPermalink }}" alt="{{ .Title }} image">
@@ -45,43 +45,7 @@
                     <p>{{ .Content | truncate 200 "..." }}</p>
                 {{ end }}
             {{ end }}
-
-            <div class="card-details">
-                {{ if .Content }}
-                    <div class="trail-content">{{ .Content }}</div>
-                {{ end }}
-
-                {{ with .Params.Video }}
-                    <div class="trail-video">
-                        <h3>{{ T "trailVideo" }}</h3>
-                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>
-                    </div>
-                {{ end }}
-
-                {{ with $gallery }}
-                    <div class="trail-gallery">
-                        <h3>{{ T "gallery" }}</h3>
-                        <div class="gallery-grid">
-                            {{ range . }}
-                                <img src="{{ . }}" alt="{{ $.Title }} gallery image">
-                            {{ end }}
-                        </div>
-                    </div>
-                {{ end }}
-
-                {{ with .Params.Link }}
-                    <a class="trail-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ T "trailExternalLink" }}</a>
-                {{ end }}
-            </div>
-        </article>
+        </div>
     {{ end }}
-</div>
-
-<div class="trail-modal" aria-hidden="true">
-    <div class="trail-modal-backdrop" data-close-modal></div>
-    <div class="trail-modal-panel" role="dialog" aria-modal="true" aria-label="Trail details">
-        <button class="trail-modal-close" type="button" aria-label="Close" data-close-modal>&times;</button>
-        <div class="trail-modal-content"></div>
-    </div>
 </div>
 {{ end }}

@@ -6,7 +6,7 @@
   --glass-bg-opaque: linear-gradient(0deg, #3e3e3e, #474747);
 
   --glass-border: 2px solid #ececec1e;
-  --glass-blur: blur(6px) brightness(0.5);
+  --glass-blur: blur(6px) brightness(0.6);
 
   --green-gradient: linear-gradient(0deg, #2295225d, #08590831);
   --green-border: 2px solid #31b5312c;
