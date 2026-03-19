@@ -1,20 +1,20 @@
 .content-wrapper {
-  width: min(1000px, 90vw);
-  margin: 0 auto;
+    width: min(1000px, 90vw);
+    margin: 0 auto;
 }
 
 .youtube {
-  width: min(800px, 90vw);
-  aspect-ratio: 16 / 9;
-  margin: 2rem auto;
-  border-radius: 1rem;
-  overflow: hidden;
+    width: min(800px, 90vw);
+    aspect-ratio: 16 / 9;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .youtube iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .grid {
@@ -68,7 +68,8 @@
 
 .lightbox-img {
     max-width: 95%;
-    max-height: 95%;;
+    max-height: 95%;
+    ;
 }
 
 .lightbox button {

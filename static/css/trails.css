@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
-    margin: 0 3.5rem;
+    margin: 1rem 3.5rem;
     padding: 1rem;
     border-radius: 2.5rem;
     position: relative;
@@ -15,8 +15,8 @@
     --card-40: color-mix(in srgb, var(--card-color) 40%, transparent);
     --card-light: color-mix(in srgb, var(--card-color) 50%, white);
 
-    pointer-events: none;
     perspective: 100px;
+    cursor: pointer;
 }
 
 .card-border {
@@ -30,91 +30,83 @@
 }
 
 .card-border:hover {
-  animation: card-perspective ease-out 0.3s forwards;
+    animation: card-perspective ease-out 0.3s forwards;
 }
 
 @keyframes card-perspective {
-  from {
-    transform: none;
-  } 
-  to {
-    transform: rotateX(var(--perspective-x)) rotateY(var(--perspective-y));
-  }
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: rotateX(var(--perspective-x)) rotateY(var(--perspective-y));
+    }
 }
 
 @keyframes card-perspective-out {
-  from {
-    transform: rotateX(var(--perspective-x)) rotateY(var(--perspective-y));
-  } 
-  to {
-    transform: none;
-  }
+    from {
+        transform: rotateX(var(--perspective-x)) rotateY(var(--perspective-y));
+    }
+
+    to {
+        transform: none;
+    }
 }
 
 .card-border::before {
-  border-radius: inherit;
-  background: radial-gradient(
-    300px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.25),
-    transparent 40%
-  );
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  content: "";
-  opacity: 0;
-  transition: opacity 500ms;
+    border-radius: inherit;
+    background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.25),
+            transparent 40%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
-#cards:hover .card-border::before {
-  opacity: 1;
+.card-grid:hover .card-border::before {
+    opacity: 1;
 }
 
 .card-inside {
-  background: var(--card-90);
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  border-radius: 1rem;
-  position: relative;
-  top: 2px;
-  left: 2px;
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  pointer-events: all;
-  padding: 1.5rem;
-  box-sizing: border-box;
-}
-
-.card-inside * {
-  pointer-events: none;
+    background: var(--card-90);
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 1rem;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
 .card-inside:hover::before {
-  opacity: 1;
+    opacity: 1;
 }
 
 .card-inside::before {
-  border-radius: inherit;
-  background: radial-gradient(
-    600px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.12),
-    transparent 40%
-  );
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  content: "";
-  opacity: 0;
-  transition: opacity 500ms;
-  pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.12),
+            transparent 40%);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    opacity: 0;
+    transition: opacity 500ms;
 }
 
-.card * {
+.card *, .modal * {
     color: #ffffffee;
     margin: 0;
 }
@@ -146,32 +138,143 @@
     background: #ffffff44;
 }
 
-.stats > div {
+.stats>div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.stats > div > h2 {
+.stats>div>h2 {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.stats > div > p {
+.stats>div>p {
     font-size: 0.875rem;
     color: #ffffffaa;
 }
 
-.card > img {
+.card>img {
     width: 100%;
     border-radius: 0.5rem;
     height: auto;
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px;
+    /* Adjust as needed */
     object-fit: cover;
     object-position: center;
 }
 
-.card > p {
+.card>p {
     font-size: 1rem;
     color: #ffffffcc;
+}
+
+/* Modal */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.backdrop.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal {
+    display: none;
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    backdrop-filter: brightness(0.4) blur(20px);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 3rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    animation: modal-in 0.5s ease;
+}
+
+.modal.active {
+    display: block;
+}
+
+@keyframes modal-in {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease;
+    border-radius: 100px;
+}
+
+.modal-close:hover {
+    background-color: #00000040;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-image {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.modal-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.modal-description {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.difficulty-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.difficulty-dot {
+    --difficulty-color-light: color-mix(in srgb, var(--difficulty-color) 90%, white);
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: var(--difficulty-color-light);
+    box-shadow: 0 0 5px var(--difficulty-color-light);
 }
