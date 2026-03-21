@@ -40,14 +40,15 @@
     align-items: center;
     gap: 2rem;
     width: 100%;
-    padding-bottom: 4rem;
+    box-sizing: border-box;
+    padding: 0 1rem 4rem 1rem;
 }
 
 .content-wrapper section {
     width: min(1200px, 90vw);
 }
 
-/* Carousel */
+/* Sponsor carousel */
 
 .carousel-group {
     display: flex;
@@ -149,6 +150,10 @@
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+    }
+
+    .content-wrapper {
+        padding: 0 1rem 0 1rem;
     }
 
     .carousel-track img {
