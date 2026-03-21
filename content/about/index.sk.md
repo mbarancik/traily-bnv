@@ -4,13 +4,13 @@ title = 'About'
 heroTitle = "O nás"
 heroImage = ""
 +++
-# Lorem ipsum
+# Lorem ipsumememe
 Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem 
 ## Dolor sit amet
 Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem 
 ## Podnadpis
 Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem 
-![stolicka](/media/stolicka2.jpg)
+![logo](/logo.png)
 ### Podpodpodnadpis
 Ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet loremipsum dolor sit amet loremipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem 
 # Dalsi nadpis
