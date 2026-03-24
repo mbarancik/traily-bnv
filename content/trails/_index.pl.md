@@ -1,4 +1,4 @@
 +++
-title = "Trails"
-heroTitle = "Trails"
+title = "Trasy"
+heroTitle = "Trasy"
 +++

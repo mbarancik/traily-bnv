@@ -1,6 +1,6 @@
 +++
-title = 'Fotogaléria'
-heroTitle = "Fotogaléria"
+title = 'Gallery'
+heroTitle = "Gallery"
 heroImage = ""
 +++
 {{< youtube id=bpdFWkNLf5A class=youtube >}}

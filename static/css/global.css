@@ -49,8 +49,22 @@ h1 {
     font-weight: 600;
 }
 
+h2 {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 600;
+}
+
 p {
     line-height: 1.6;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
 
 .material-symbols-rounded {
@@ -103,7 +117,7 @@ p {
 }
 
 header {
-    width: min(900px, 90vw);
+    width: min(1100px, 80vw);
     margin-top: 16px;
     padding: 12px 24px;
     display: grid;
@@ -154,6 +168,17 @@ header a:hover {
     left: 50%;
     transform: translate(-50%, 5%);
     height: 72px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+    header {
+        padding-left: 80px;
+    }
+
+    .logo-wrapper {
+        left: -40px;
+    }
 }
 
 .logo {
@@ -542,7 +567,7 @@ footer {
     background: #ffffff44;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     header {
         width: 85%;
         padding: 8px 16px;

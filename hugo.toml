@@ -22,7 +22,7 @@ title = 'My New Hugo Site'
 # Remove a block to remove a link.
 
 [[languages.sk.menus.main]]
-  name = "Trails"
+  name = "Traily"
   pageRef = "/trails"
   weight = 10
 [[languages.sk.menus.main]]
@@ -30,9 +30,13 @@ title = 'My New Hugo Site'
   pageRef = "/gallery"
   weight = 19
 [[languages.sk.menus.main]]
-  name = "O nás"
-  pageRef = "/about"
+  name = "Lokalita"
+  pageRef = "/location"
   weight = 20
+[[languages.sk.menus.main]]
+  name = "Podporte nás"
+  pageRef = "/donate"
+  weight = 30
 
 [[languages.pl.menus.main]]
   name = "Trasy"
@@ -43,9 +47,13 @@ title = 'My New Hugo Site'
   pageRef = "/gallery"
   weight = 19
 [[languages.pl.menus.main]]
-  name = "Info"
-  pageRef = "/info"
+  name = "Lokalizacja"
+  pageRef = "/location"
   weight = 20
+[[languages.pl.menus.main]]
+  name = "Wesprzyj nas"
+  pageRef = "/donate"
+  weight = 30
 
 [[languages.en.menus.main]]
   name = "Trails"
@@ -56,6 +64,10 @@ title = 'My New Hugo Site'
   pageRef = "/gallery"
   weight = 19
 [[languages.en.menus.main]]
-  name = "About"
-  pageRef = "/about"
+  name = "Location"
+  pageRef = "/location"
   weight = 20
+[[languages.en.menus.main]]
+  name = "Support us"
+  pageRef = "/donate"
+  weight = 30

@@ -2,7 +2,7 @@
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 
 difficulty = ""
-difficulty_index = 4
+difficulty_index = 1
 distance = ""
 elevation = ""
 is_uphill = false

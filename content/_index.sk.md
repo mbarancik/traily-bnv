@@ -3,27 +3,49 @@ title = "Domov"
 heroTitle = "Traily na skok."
 
 heroPrimaryBtn = "Mapa trailov"
-heroPrimaryBtnLink = "https://google.com"
+heroPrimaryBtnLink = "https://www.trailforks.com/region/bardejovska-nova-ves-67387/"
 
-heroSecondaryBtn = "Adresa"
-heroSecondaryBtnLink = "about"
+heroSecondaryBtn = "Lokalita"
+heroSecondaryBtnLink = "location"
 
 sponsorsTitle = "Ďakujeme našim sponzorom"
 
 donateTitle = "Podporte nás"
 donateText = "Podporte nás, aby sme mohli pokračovať v rozvoji a údržbe Bardejovských trailov."
 
-donateBtn = "Podporiť"
-donateBtnLink = "https://example.com"
+donateBtn = "Prispieť"
+donateBtnLink = "donate"
 +++
-# Traily
-Traily BNV je projekt zameraný na vytváranie a údržbu horských trailov v okolí Bardejova. Naším cieľom je poskytnúť cyklistom, bežcom a turistom kvalitné trasy, ktoré im umožnia objavovať krásy prírody a zároveň podporiť miestnu komunitu. Sme hrdí na to, že môžeme prispieť k rozvoju outdoorových aktivít v regióne a vytvárať priestor pre zdravý životný štýl.
-## Naše traily
-Naše traily sú navrhnuté tak, aby ponúkali rôzne úrovne obtiažnosti, od ľahkých až po náročné, aby si každý mohol nájsť tú pravú trasu pre seba. Každý trail je starostlivo udržiavaný a pravidelne kontrolovaný, aby sme zabezpečili bezpečnosť a kvalitu pre všetkých návštevníkov. Naše traily vedú cez malebné lesy, kopce a údolí, poskytujúc nádherné výhledy a nezapomenutelné zážitky pro všechny, kteří se rozhodnou je navštívit.
-## O nás
-Sme skupina nadšenců, kteří milují přírodu a outdoorové aktivity. Naším cílem je vytvořit a udržovat kvalitní traily v okolí Bardejova, které budou přístupné pro všechny. Spolupracujeme s místní komunitou, dobrovolníky a sponzory, abychom zajistili, že naše traily budou bezpečné, zábavné a přínosné pro všechny návštěvníky. Jsme hrdí na to, že můžeme přispět k rozvoji outdoorových aktivit v našem regionu a těšíme se na všechny, kteří se k nám připojí na našich trailů.
-# Kontakt
-Máte otázky, nápady nebo chcete se zapojit do našeho projektu? Neváhejte nás kontaktovat prostřednictvím e-mailu na adrese.
-## Adresa
-Hlavná 123, 085 01
-Bardejov, Slovensko
+
+# O Trailoch BNV
+
+Traily BNV sú komunitne budovaná sieť horských trailov v Bardejovskej Novej Vsi.
+Vznikajú vďaka nadšencom, ktorí dlhodobo venujú čas čisteniu trás, údržbe povrchov,
+budovaniu bezpečných prvkov a zlepšovaniu jazdeckého zážitku počas celej sezóny.
+
+## Čo tu nájdeš
+
+Aktuálne ponúkame **9 značených trás**:
+
+- **6 zjazdových trailov**
+- **3 výšľapy**
+
+Trasy sú rôznorodé – od plynulých flow úsekov pre začiatočníkov až po technické pasáže,
+ktoré preveria skúsených jazdcov. V areáli si tak vieš poskladať krátke rekreačné kolá
+aj dlhší tréningový deň s viacerými opakovaniami.
+
+# Jazdi zodpovedne
+
+![Upozornenie](Warning.svg)
+
+- Vstup na vlastnú zodpovednosť.
+- Prilba je povinná, odporúčame aj rukavice, chrániče kolien, lakťov a chrbta.
+- Traily sú jednosmerné a je zakázané jazdiť mimo nich, alebo ich akokoľvek upravovať.
+- Pred jazdou si vždy skontroluj aktuálny stav tratí a prispôsob rýchlosť podmienkam.
+- Po daždi môžu byť niektoré úseky mäkké alebo klzké.
+
+## Čistota a ohľaduplnosť
+
+Prosíme o udržiavanie čistoty - čo ste si doniesli, to si aj odneste. Jazdite obozretne, predvídavo a nepreceňujte svoje schopnosti
+pretože turistov, hubárov alebo deti môžete stretnúť nie len v blízkosti,
+ale aj priamo na trailoch.

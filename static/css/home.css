@@ -48,6 +48,13 @@
     width: min(1200px, 90vw);
 }
 
+.markdown-content img {
+    float: inline-end;
+    max-height: 60vh;
+    margin: 0.5rem;
+    border-radius: 1.5rem;
+}
+
 /* Sponsor carousel */
 
 .carousel-group {
@@ -154,6 +161,13 @@
 
     .content-wrapper {
         padding: 0 1rem 0 1rem;
+    }
+
+    .markdown-content img {
+        float: none;
+        max-height: 60vh;
+        margin: 0.5rem;
+        border-radius: 1.5rem;
     }
 
     .carousel-track img {

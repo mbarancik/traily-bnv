@@ -1,4 +1,4 @@
-headerTitle = "BNV Trails"
+headerTitle = "Trails BNV"
 statusOpen = "Open"
 statusClosed = "Closed"
 
@@ -8,3 +8,4 @@ trailVideo = "Video"
 gallery = "Gallery"
 trailExternalLink = "Open trail link"
 uphillTrails = "Uphill trails"
+footerDesc = "A new riding area in Bardejovská Nová Ves near Bardejov, offering trails of varying difficulty from an easy flow trail to raw enduro — built by riders for riders."
