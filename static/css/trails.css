@@ -1,3 +1,11 @@
+.trail-group-title {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -18,22 +26,25 @@
 }
 
 .card {
-    --card-90: color-mix(in srgb, var(--card-color) 80%, transparent);
-    --card-40: color-mix(in srgb, var(--card-color) 40%, transparent);
-    --card-light: color-mix(in srgb, var(--card-color) 50%, white);
+    --card-80: color-mix(in srgb, var(--card-color) 80%, transparent);
+    --card-50: color-mix(in srgb, var(--card-color) 50%, transparent);
+    --card-30: color-mix(in srgb, var(--card-color) 30%, transparent);
+
+    --card-light: color-mix(in srgb, var(--card-color) 80%, white);
+    --card-dark: color-mix(in srgb, var(--card-color) 70%, black);
 
     perspective: 100px;
     cursor: pointer;
 }
 
 .card-border {
-    background-color: var(--card-40);
+    background-color: var(--card-50);
     height: 100%;
     border-radius: calc(1rem + 2px);
     position: relative;
     transform: none;
     animation: card-perspective-out ease-out 0.3s forwards;
-    filter: drop-shadow(0 0 10px #00000015);
+    box-shadow: 0 0 12px var(--card-30);
 }
 
 .card-border:hover {
@@ -63,7 +74,7 @@
 .card-border::before {
     border-radius: inherit;
     background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.18),
             transparent 40%);
     height: 100%;
     width: 100%;
@@ -80,7 +91,7 @@
 }
 
 .card-inside {
-    background: var(--card-90);
+    background: linear-gradient(0deg, #191919d0 60%, var(--card-light) 100%);
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     border-radius: 1rem;
@@ -99,7 +110,7 @@
 .card-inside::before {
     border-radius: inherit;
     background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.06),
             transparent 40%);
     height: 100%;
     width: 100%;
@@ -128,10 +139,8 @@
     flex-direction: column;
 }
 
-.info h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1;
+.card-inside .info h1 {
+    font-size: 2rem;
 }
 
 .info .difficulty {
@@ -256,6 +265,10 @@
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
+}
+
+.modal h1 {
+    font-size: 2.5rem;
 }
 
 .modal-image {

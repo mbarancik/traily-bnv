@@ -2,15 +2,17 @@
 title = 'Kiddo'
 
 difficulty = "Ľahký"
-distance = "10 km"
-elevation = "200 m"
+difficulty_index = 1
+distance = "163 m"
+elevation = "12 m"
 color = "#0d6d00"
-photo = "stolicka2.jpg"
+photo = ""
 video = ""
-link = ""
+link = "https://www.trailforks.com/trails/kiddo/"
 
 [_build]
   render = "never"
   list = "local"
 +++
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Kiddo je nenáročný krátky trail pre všetky vekové kategórie, najmä pre najmenších.
+Nachádza sa na ňom niekoľko drevených prvkov, terénne nerovnosti a malý rock garden na nácvik rovnováhy a istoty pri ovládaní bicykla.

@@ -1,8 +1,10 @@
 :root {
     --bg-color: #eeede4;
     --text-color: #2d2d2d;
-    --grid-minor-color: #2d2d2d0b;
+    --grid-minor-color: #2d2d2d09;
     --grid-minor-size: 20px;
+    --grid-major-color: #2d2d2d09;
+    --grid-major-size: 100px;
 
     --glass-bg: linear-gradient(0deg, #b3b3b364, #dedede13);
     --glass-bg-opaque: linear-gradient(0deg, #3e3e3e, #474747);
@@ -25,10 +27,14 @@ body {
     background-color: var(--bg-color);
     background-image:
         linear-gradient(to right, var(--grid-minor-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-minor-color) 1px, transparent 1px);
+        linear-gradient(to bottom, var(--grid-minor-color) 1px, transparent 1px),
+        linear-gradient(to right, var(--grid-major-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-major-color) 1px, transparent 1px);
     background-size:
         var(--grid-minor-size) var(--grid-minor-size),
-        var(--grid-minor-size) var(--grid-minor-size);
+        var(--grid-minor-size) var(--grid-minor-size),
+        var(--grid-major-size) var(--grid-major-size),
+        var(--grid-major-size) var(--grid-major-size);
     background-repeat: repeat;
     color: var(--text-color);
 }

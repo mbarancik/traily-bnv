@@ -8,54 +8,111 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="card-grid">
-    {{ range .Pages }}
-        <div class="card" style='--card-color: {{ .Params.Color | default "#808080" }};' role="button" tabindex="0" aria-expanded="false" data-trail="{{ .File.ContentBaseName }}">
-            <div class="card-border">
-                <div class="card-inside">
-                    <div class="card-content">
-                        <div class="info">
-                            <h1>{{ .Title }}</h1>
-                            {{ if .Params.Difficulty }}
-                                <p class="difficulty">{{ .Params.Difficulty }}</p>
+{{ $uphillPages := where .Pages "Params.is_uphill" true }}
+{{ $otherPages := where .Pages "Params.is_uphill" "ne" true }}
+
+{{ if gt (len $otherPages) 0 }}
+    <div class="card-grid">
+        {{ range sort $otherPages "Params.difficulty_index" "asc" }}
+            <div class="card" style='--card-color: {{ .Params.Color | default "#808080" }};' role="button" tabindex="0" aria-expanded="false" data-trail="{{ .File.ContentBaseName }}">
+                <div class="card-border">
+                    <div class="card-inside">
+                        <div class="card-content">
+                            <div class="info">
+                                <h1>{{ .Title }}</h1>
+                                {{ if .Params.Difficulty }}
+                                    <p class="difficulty">{{ .Params.Difficulty }}</p>
+                                {{ end }}
+                            </div>
+
+                            {{ if or .Params.Distance .Params.Elevation }}
+                                <div class="stats">
+                                    {{ if .Params.Distance }}
+                                        <div>
+                                            <h2>{{ .Params.Distance }}</h2>
+                                            <p>{{ T "distance" }}</p>
+                                        </div>
+                                    {{ end }}
+                                    {{ if and .Params.Elevation .Params.Distance }}
+                                        <div class="divider"></div>
+                                    {{ end }}
+                                    {{ if .Params.Elevation }}
+                                        <div>
+                                            <h2>{{ .Params.Elevation }}</h2>
+                                            <p>{{ T "elevation" }}</p>
+                                        </div>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+
+                            {{ if not .Params.Photo }}
+                                <div class="description">{{ .Content | truncate 200 "..." }}</div>
                             {{ end }}
                         </div>
 
-                        {{ if or .Params.Distance .Params.Elevation }}
-                            <div class="stats">
-                                {{ if .Params.Distance }}
-                                    <div>
-                                        <h2>{{ .Params.Distance }}</h2>
-                                        <p>{{ T "distance" }}</p>
-                                    </div>
-                                {{ end }}
-                                {{ if and .Params.Elevation .Params.Distance }}
-                                    <div class="divider"></div>
-                                {{ end }}
-                                {{ if .Params.Elevation }}
-                                    <div>
-                                        <h2>{{ .Params.Elevation }}</h2>
-                                        <p>{{ T "elevation" }}</p>
-                                    </div>
-                                {{ end }}
-                            </div>
-                        {{ end }}
-
-                        {{ if not .Params.Photo }}
-                            <div class="description">{{ .Content | truncate 200 "..." }}</div>
+                        {{ if .Params.Photo }}
+                            {{ with .Resources.Get .Params.Photo }}
+                                <img src="{{ .RelPermalink }}" alt="{{ $.Title }} image">
+                            {{ end }}
                         {{ end }}
                     </div>
-
-                    {{ if .Params.Photo }}
-                        {{ with .Resources.Get .Params.Photo }}
-                            <img src="{{ .RelPermalink }}" alt="{{ $.Title }} image">
-                        {{ end }}
-                    {{ end }}
                 </div>
             </div>
-        </div>
-    {{ end }}
-</div>
+        {{ end }}
+    </div>
+{{ end }}
+
+{{ if gt (len $uphillPages) 0 }}
+    <h1 class="trail-group-title">{{ T "uphillTrails" }}</h2>
+    <div class="card-grid">
+        {{ range $uphillPages }}
+            <div class="card" style='--card-color: {{ .Params.Color | default "#808080" }};' role="button" tabindex="0" aria-expanded="false" data-trail="{{ .File.ContentBaseName }}">
+                <div class="card-border">
+                    <div class="card-inside">
+                        <div class="card-content">
+                            <div class="info">
+                                <h1>{{ .Title }}</h1>
+                                {{ if .Params.Difficulty }}
+                                    <p class="difficulty">{{ .Params.Difficulty }}</p>
+                                {{ end }}
+                            </div>
+
+                            {{ if or .Params.Distance .Params.Elevation }}
+                                <div class="stats">
+                                    {{ if .Params.Distance }}
+                                        <div>
+                                            <h2>{{ .Params.Distance }}</h2>
+                                            <p>{{ T "distance" }}</p>
+                                        </div>
+                                    {{ end }}
+                                    {{ if and .Params.Elevation .Params.Distance }}
+                                        <div class="divider"></div>
+                                    {{ end }}
+                                    {{ if .Params.Elevation }}
+                                        <div>
+                                            <h2>{{ .Params.Elevation }}</h2>
+                                            <p>{{ T "elevation" }}</p>
+                                        </div>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+
+                            {{ if not .Params.Photo }}
+                                <div class="description">{{ .Content | truncate 200 "..." }}</div>
+                            {{ end }}
+                        </div>
+
+                        {{ if .Params.Photo }}
+                            {{ with .Resources.Get .Params.Photo }}
+                                <img src="{{ .RelPermalink }}" alt="{{ $.Title }} image">
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+{{ end }}
 
 <div class="backdrop">
     {{ range .Pages }}

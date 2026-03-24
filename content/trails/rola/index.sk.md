@@ -1,15 +1,19 @@
 +++
-title = 'Rola'
+title = 'Ro-Ľa'
 
-difficulty = "Vysoká"
-distance = "500 m"
+difficulty = "Náročný"
+difficulty_index = 3
+distance = "872 m"
+elevation = "132 m"
 color = "#cc1020"
 photo = ""
 video = ""
-link = ""
+link = "https://www.trailforks.com/trails/ro-a/"
 
 [_build]
   render = "never"
   list = "local"
 +++
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+Ro-Ľa je stredne náročný trail, v ktorom sa striedajú prírodné úseky s upravenými pasážami.
+Úvod tvoria klopené zákruty cez borovicovú alej a prechod do sekcie terás a plytkých žľabov s mäkkou lesnou hrabankou.
+V druhej polovici trailu nasledujú zavreté switchbacky, úzke zárezy a technický záver s malým gapom a ostrou zákrutou.
