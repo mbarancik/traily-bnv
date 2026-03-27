@@ -1,6 +1,6 @@
 +++
 draft = false
-title = 'Kde nás nájdete'
-heroTitle = "Lokalita"
+title = 'Lokalita'
+heroTitle = "Kde nás nájdete"
 heroImage = ""
 +++
