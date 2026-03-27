@@ -11,7 +11,7 @@ photo = ""
 video = ""
 link = ""
 
-[_build]
+[build]
   render = "never"
   list = "local"
 +++

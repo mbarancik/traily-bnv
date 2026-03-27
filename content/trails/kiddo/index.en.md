@@ -10,7 +10,7 @@ photo = ""
 video = ""
 link = "https://www.trailforks.com/trails/kiddo/"
 
-[_build]
+[build]
   render = "never"
   list = "local"
 +++

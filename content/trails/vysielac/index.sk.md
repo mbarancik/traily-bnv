@@ -10,7 +10,7 @@ photo = ""
 video = ""
 link = "https://www.trailforks.com/trails/vysiela-781152/"
 
-[_build]
+[build]
   render = "never"
   list = "local"
 +++

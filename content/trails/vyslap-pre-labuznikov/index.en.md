@@ -10,7 +10,7 @@ photo = ""
 video = ""
 link = "https://www.trailforks.com/trails/vys-ap---pre-labu-nikov/"
 
-[_build]
+[build]
   render = "never"
   list = "local"
 +++

@@ -2,7 +2,7 @@ const mnts = document.querySelectorAll(".mnt");
 const mntBottomFills = document.querySelectorAll(".mnt-bottom-fill");
 const mntFooter = document.querySelector(".footer-mnt");
 
-window.addEventListener("scroll", () => {
+const animateMnts = () => {
   const scrollY = window.scrollY;
   const scrollYBottom = window.scrollMaxY - window.scrollY;
 
@@ -16,4 +16,7 @@ window.addEventListener("scroll", () => {
     const translateScroll = Math.max(0, scrollYBottom - 50)
     mntFooter.style.transform = `translateY(${translateScroll * speed + 1}px)`;
   }
-});
+}
+
+window.addEventListener("scroll", () => animateMnts());
+animateMnts();
