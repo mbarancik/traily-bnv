@@ -22,11 +22,11 @@
     <div class="header-flex">
         <header>
             <section class="pc-header">
-                <a href="/{{ .Lang }}" class="logo-wrapper">
+                <a href='{{ if eq .Lang "sk" }}/{{ else }}/{{ .Lang }}{{ end }}' class="logo-wrapper">
                     <img src="/media/logo.png" alt="" class="logo">
                 </a>
                 <div>
-                    <a href="/{{ .Lang }}" style="font-weight: 600;" class="header-title">{{ T "headerTitle" }}</a>
+                    <a href='{{ if eq .Lang "sk" }}/{{ else }}/{{ .Lang }}{{ end }}' style="font-weight: 600;" class="header-title">{{ T "headerTitle" }}</a>
                     <span class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}">
                         <span class="material-symbols-rounded">
                             {{ if .Site.Data.status.isOpen }}check_circle{{ else }}do_not_disturb_on{{ end }}
