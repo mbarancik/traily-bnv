@@ -307,13 +307,19 @@
 
 @media screen and (max-width: 768px) {
     .modal {
-        padding: 1.5rem;
-        margin: 1rem;
-        max-height: none
+        margin: 3rem 1rem;
+        max-height: calc(100vh - 6rem);
+        max-height: calc(100dvh - 6rem);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .modal-top {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
     }
 }

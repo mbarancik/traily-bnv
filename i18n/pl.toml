@@ -6,7 +6,7 @@ distance = "Dystans"
 elevation = "Przewyższenie"
 trailVideo = "Video"
 gallery = "Galeria"
-trailExternalLink = "Otwórz link do trasy"
+openTrailforks = "Zobacz na Trailforks"
 uphillTrails = "Trasy podjazdowe"
 
 footerStatus = "Aktualny status"

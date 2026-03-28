@@ -6,7 +6,7 @@ distance = "Vzdialenosť"
 elevation = "Prevýšenie"
 trailVideo = "Video"
 gallery = "Galéria"
-trailExternalLink = "Otvoriť odkaz trailu"
+openTrailforks = "Zobraziť na Trailforks"
 uphillTrails = "Výšľapové traily"
 
 footerStatus = "Aktuálny stav"

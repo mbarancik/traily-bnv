@@ -6,7 +6,7 @@ distance = "Distance"
 elevation = "Elevation"
 trailVideo = "Video"
 gallery = "Gallery"
-trailExternalLink = "Open trail link"
+openTrailforks = "View on Trailforks"
 uphillTrails = "Uphill trails"
 
 footerStatus = "Current status"

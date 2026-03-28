@@ -161,6 +161,12 @@
                 </div>
 
                 <div class="modal-description">{{ .Content }}</div>
+
+                {{ if .Params.Link }}
+                    <a href="{{ .Params.Link }}" target="_blank" rel="noopener" class="btn" style="width: fit-content;">
+                        {{ T "openTrailforks" }}
+                    </a>
+                {{ end }}
             </div>
         </div>
     {{ end }}

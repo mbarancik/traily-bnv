@@ -1,0 +1,41 @@
+{{ define "head" }}
+<style>
+.maps-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto; 
+    border-radius: 1.5rem; 
+    overflow: hidden; 
+    border: 2px solid #bcbcbc60;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .maps-wrapper {
+        border-radius: 0;
+    }
+}
+
+.maps-iframe {
+    border: 0;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
+    height: auto;
+    display: block
+}
+</style>
+{{ end }}
+
+{{ define "hero" }}
+<div class="hero-content">
+    <h1>{{ .Params.heroTitle }}</h1>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<div class="maps-wrapper">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.6406952582433!2d21.314357576416675!3d49.30214916937553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e81000850d3a3%3A0x518f7a8f97fc0903!2sTraily%20Bardejovsk%C3%A1%20Nov%C3%A1%20Ves%20-%20TBNV!5e0!3m2!1ssk!2scz!4v1774697318027!5m2!1ssk!2scz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps-iframe"></iframe>
+</div>
+{{ end }}
