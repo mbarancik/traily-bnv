@@ -104,13 +104,13 @@
         <img src="/media/footer-bg.svg" alt="" class="footer-bg">
         <div class="footer-content">
             <div>
-                <h1>Traily BNV</h1>
+                <h1>{{ T "headerTitle" }}</h1>
                 <p>{{ T "footerDesc" }}</p>
             </div>
 
             <div>
                 <div id="status" class="footer-status">
-                    <h1>Aktuálny stav</h1>
+                    <h1>{{ T "footerStatus" }}</h1>
                     <span class="status {{ if not .Site.Data.status.isOpen }}closed{{ end }}">
                         <span class="material-symbols-rounded">
                             {{ if .Site.Data.status.isOpen }}check_circle{{ else }}do_not_disturb_on{{ end }}
@@ -124,7 +124,7 @@
             </div>
 
             <div>
-                <h1>Sociálne siete</h1>
+                <h1>{{ T "footerSocial" }}</h1>
                 {{ range .Site.Data.social }}
                     <div class="social-link">
                         <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
