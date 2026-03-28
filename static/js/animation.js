@@ -1,10 +1,13 @@
 const mnts = document.querySelectorAll(".mnt");
 const mntBottomFills = document.querySelectorAll(".mnt-bottom-fill");
 const mntFooter = document.querySelector(".footer-mnt");
+let latestScrollY = window.scrollY;
+let latestInnerHeight = window.innerHeight;
+let isTicking = false;
 
 const animateMnts = () => {
-  const scrollY = window.scrollY;
-  const maxScrollY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  const scrollY = latestScrollY;
+  const maxScrollY = Math.max(0, document.documentElement.scrollHeight - latestInnerHeight);
   const scrollYBottom = maxScrollY - scrollY;
 
   mnts.forEach(mnt => {
@@ -17,8 +20,29 @@ const animateMnts = () => {
     const translateScroll = Math.max(0, scrollYBottom - 50);
     mntFooter.style.transform = `translate3d(0, ${translateScroll * speed + 1}px, 0)`;
   }
-}
+};
 
-window.addEventListener("scroll", () => animateMnts());
-window.addEventListener("resize", () => animateMnts());
-animateMnts();
+const queueAnimation = () => {
+  if (isTicking) {
+    return;
+  }
+
+  isTicking = true;
+  requestAnimationFrame(() => {
+    animateMnts();
+    isTicking = false;
+  });
+};
+
+window.addEventListener("scroll", () => {
+  latestScrollY = window.scrollY;
+  queueAnimation();
+}, { passive: true });
+
+window.addEventListener("resize", () => {
+  latestInnerHeight = window.innerHeight;
+  latestScrollY = window.scrollY;
+  queueAnimation();
+}, { passive: true });
+
+queueAnimation();
