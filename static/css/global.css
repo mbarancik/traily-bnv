@@ -351,6 +351,7 @@ header:hover .language-tooltip {
 /* Mountains */
 .mnt {
     --mnt-init-height: 300px;
+    --mnt-overlap-fix: clamp(10px, 2vw, 24px);
 
     bottom: -1px;
     top: auto;
@@ -369,13 +370,13 @@ header:hover .language-tooltip {
     -webkit-mask-image:
         var(--mnt-mask-image),
         linear-gradient(to bottom,
-            transparent 0 var(--mnt-cap-height),
-            #000 var(--mnt-cap-height) 100%);
+            transparent 0 calc(var(--mnt-cap-height) - var(--mnt-overlap-fix)),
+            #000 calc(var(--mnt-cap-height) - var(--mnt-overlap-fix)) 100%);
     mask-image:
         var(--mnt-mask-image),
         linear-gradient(to bottom,
-            transparent 0 var(--mnt-cap-height),
-            #000 var(--mnt-cap-height) 100%);
+            transparent 0 calc(var(--mnt-cap-height) - var(--mnt-overlap-fix)),
+            #000 calc(var(--mnt-cap-height) - var(--mnt-overlap-fix)) 100%);
 }
 
 .mnt.back {
