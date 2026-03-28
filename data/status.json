@@ -1,13 +1,13 @@
 {
     "isOpen": true,
     "openMsg": {
-        "sk": "Traily sú otvorené a pripravené na jazdu! Užívajte si skvelé podmienky a nezabudnite sa o ne starať.",
-        "en": "Trails are open and ready for riding! Enjoy the great conditions and don't forget to take care of them.",
-        "pl": "Szlaki są otwarte i gotowe do jazdy! Ciesz się świetnymi warunkami i nie zapomnij o ich opiece."
+        "sk": "Traily sú momentálne otvorené a pripravené na jazdu! ",
+        "en": "Trails are open and ready for riding!",
+        "pl": "Szlaki są otwarte i gotowe do jazdy!"
     },
     "closedMsg": {
-        "sk": "Traily sú zatvorené z dôvodu nepriaznivých podmienok a zlého počasia v zimnom období.",
-        "en": "Trails are closed due to unfavorable conditions and bad weather in the winter season.",
-        "pl": "Szlaki są zamknięte z powodu niekorzystnych warunków i złej pogody w sezonie zimowym."
+        "sk": "Traily sú momentálne zatvorené z dôvodu nepriaznivých podmienok a zlého počasia.",
+        "en": "Trails are closed due to unfavorable conditions and bad weather.",
+        "pl": "Szlaki są zamknięte z powodu niekorzystnych warunków i złej pogody."
     }
 }

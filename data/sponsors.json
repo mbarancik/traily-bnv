@@ -53,5 +53,20 @@
         "name": "Unizdrav",
         "logo": "/media/sponsors/unizdrav.svg",
         "url": "https://www.unizdrav.sk/"
+    },
+    {
+        "name": "Urbariálne pozemkové spoločenstvo Bardejovská Nová Ves",
+        "logo": "/media/sponsors/urbar_bnv.png",
+        "url": ""
+    },
+    {
+        "name": "Tesárstvo JM",
+        "logo": "/media/sponsors/tesarstvo_jm.png",
+        "url": "https://www.tesarstvojm.sk/"
+    },
+    {
+        "name": "Drevospoj",
+        "logo": "/media/sponsors/drevospoj_logo.webp",
+        "url": "https://www.drevospoj.sk/"
     }
 ]
