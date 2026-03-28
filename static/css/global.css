@@ -321,6 +321,11 @@ header:hover .language-tooltip {
     background: url(/media/topo-gray-bg.svg);
     background-size: cover;
     background-position: center;
+
+    /* flickering fix  */
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
 }
 
 .hero-content {
@@ -377,6 +382,9 @@ header:hover .language-tooltip {
         linear-gradient(to bottom,
             transparent 0 calc(var(--mnt-cap-height) - var(--mnt-overlap-fix)),
             #000 calc(var(--mnt-cap-height) - var(--mnt-overlap-fix)) 100%);
+
+    /* flickering fix */
+    -webkit-backface-visibility: hidden;
 }
 
 .mnt.back {
